@@ -26,6 +26,7 @@
     --cta-text: var(--light-background);
     --cta-button-text: var(--light-background);
     --cta-button-border: var(--light-background);
+    --footer-text-color: var(--light-background);
 
     /* Font Size */
     --hero-main-text-size: 3rem;
@@ -313,6 +314,7 @@ main {
     margin-right: 1rem;
 }
 
+/* Call To Action */
 .cta {
     width: 100%;
     background-color: var(--light-background);
@@ -366,4 +368,50 @@ main {
     border: 2px solid var(--cta-button-border);
     font-size: var(--cta-button-text-size);
     font-weight: var(--cta-button-text-weight);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta button:hover {
+    transition: 0.4s;
+    scale: 1.04;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    height: max-content;
+    background-color: var(--dark-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container {
+    color: var(--footer-text-color);
+    width: 100%;
+    max-width: var(--max-width);
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 5rem;
+}
+
+footer a {
+    color: var(--footer-text-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    opacity: 0.9;
+}
+
+footer a:active {
+    opacity: 0.8;
+}
+
+footer a:visited {
+    color: var(--footer-text-color);
+    text-decoration: none;
 }
