@@ -22,6 +22,10 @@
     --info-illustration-border: var(--button);
     --quote-background: var(--hero-secondary-text);
     --quote-text: var(var(--dark-background));
+    --cta-card-background: var(--button);
+    --cta-text: var(--light-background);
+    --cta-button-text: var(--light-background);
+    --cta-button-border: var(--light-background);
 
     /* Font Size */
     --hero-main-text-size: 3rem;
@@ -30,12 +34,15 @@
     --info-header-text-size: 2.25rem;
     --quote-text-size: var(--info-header-text-size);
     --quote-caption-size: 1.25rem;
+    --cta-text-header: 1.25rem;
 
     /* Font Weight */
     --hero-main-text-weight: 800;
     --info-header-text-weight: var(--hero-main-text-weight);
     --quote-text-weight: 200;
     --quote-caption-weight: 600;
+    --cta-text-weight: 200;
+    --cta-button-text-weight: 800;
 
     /* Font Style */
     --quote-text-style: italic;
@@ -304,4 +311,59 @@ main {
 .quote cite {
     font-style: var(--quote-cite-style);
     margin-right: 1rem;
+}
+
+.cta {
+    width: 100%;
+    background-color: var(--light-background);
+    padding: 3.5rem 1.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta .container {
+    width: 100%;
+    max-width: var(--max-width);
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2.5rem 2rem;
+}
+
+.cta .card {
+    background-color: var(--cta-card-background);
+    padding: 2rem 5rem;
+    border-radius: 9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cta .text {
+    padding-right: 3rem;
+    color: var(--cta-text);
+}
+
+.cta h3 {
+    font-size: var(--cta-text-header);
+    margin-bottom: 0.2rem;
+}
+
+.cta p {
+    font-weight: var(--cta-text-weight);
+}
+
+.cta button {
+    padding: 0.5rem 2rem;
+    text-align: center;
+    white-space: nowrap;
+    background: none;
+    border-radius: 9px;
+    color: var(--cta-button-text);
+    border: 2px solid var(--cta-button-border);
+    font-size: var(--cta-button-text-size);
+    font-weight: var(--cta-button-text-weight);
 }
