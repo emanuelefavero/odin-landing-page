@@ -95,6 +95,7 @@ header .logo {
     color: var(--header-logo-text);
     font-size: var(--header-logo-text-size);
     font-weight: var(--hero-main-text-weight);
+    margin-right: 0.6rem;
     user-select: none;
 }
 
@@ -416,4 +417,67 @@ footer a:active {
 footer a:visited {
     color: var(--footer-text-color);
     text-decoration: none;
+}
+
+@media screen and (max-width: 570px) {
+    .cta .card {
+        flex-direction: column;
+    }
+
+    .cta .text {
+        padding-right: 0;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .hero .container {
+        flex-direction: column;
+    }
+
+    .hero .hero-text {
+        margin-bottom: 2.5rem;
+    }
+
+    .hero .hero-image-placeholder {
+        width: 100%;
+        margin-left: 0rem;
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+
+    footer .copyright {
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .quote blockquote {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 388px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    header .logo {
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .cta .container {
+        padding: 0.2rem;
+    }
+    .cta .card {
+        padding: 1rem;
+    }
 }
