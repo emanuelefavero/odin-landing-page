@@ -7,6 +7,7 @@
     --max-width: 1280px;
 
     /* Colors */
+    --light-background: #fff;
     --dark-background: #1f2937;
     --hero-main-text: #f9faf8;
     --hero-secondary-text: #e5e7eb;
@@ -17,6 +18,8 @@
     --button-active: #275cb1;
     --call-to-action-background: var(--button);
     --info-header-text: #1f2937;
+    --info-text: rgb(78, 86, 97);
+    --info-illustration-border: var(--button);
     --quote-background: var(--hero-secondary-text);
     --quote-text: var(var(--dark-background));
 
@@ -26,13 +29,17 @@
     --header-logo-text-size: 1.5rem;
     --info-header-text-size: 2.25rem;
     --quote-text-size: var(--info-header-text-size);
+    --quote-caption-size: 1.25rem;
 
     /* Font Weight */
     --hero-main-text-weight: 800;
     --info-header-text-weight: var(--hero-main-text-weight);
+    --quote-text-weight: 200;
+    --quote-caption-weight: 600;
 
     /* Font Style */
     --quote-text-style: italic;
+    --quote-cite-style: normal;
 }
 
 /* Basic Styling */
@@ -82,14 +89,14 @@ header .logo {
     user-select: none;
 }
 
-header .links {
+header ul.links {
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
 }
 
-header .links li {
+header ul.links li {
     margin: 0 0.7rem;
 }
 
@@ -114,6 +121,7 @@ main {
     flex-direction: column;
 }
 
+/* Hero */
 .hero {
     width: 100%;
     background-color: var(--dark-background);
@@ -131,6 +139,7 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.25rem;
+    margin-bottom: 2rem;
 }
 
 .hero .hero-text {
@@ -183,4 +192,116 @@ main {
     align-items: center;
     padding: 3rem;
     margin-left: 3rem;
+}
+
+.hero .hero-image-placeholder p {
+    color: var(--hero-secondary-text);
+}
+
+/* Info */
+.info {
+    width: 100%;
+    background-color: var(--light-background);
+    padding: 3.5rem 1.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info .container {
+    width: 100%;
+    max-width: var(--max-width);
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0rem 1.25rem;
+}
+
+.info h2 {
+    color: var(--info-header-text);
+    font-size: var(--info-header-text-size);
+    font-weight: var(--info-header-text-weight);
+    margin-bottom: 1.8rem;
+}
+
+.info ul.illustrations-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.info ul.illustrations-container li {
+    max-width: 824px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: clamp(1rem, 2vw, 2rem);
+}
+
+.info ul.illustrations-container li .illustration {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 0.6rem;
+    background-color: none;
+    border: 3px solid var(--info-illustration-border);
+    border-radius: 10px;
+}
+
+.info ul.illustrations-container li p {
+    width: 150px;
+    color: var(--info-text);
+    text-align: center;
+}
+
+/* Quote */
+.quote {
+    width: 100%;
+    background-color: var(--quote-background);
+    padding: 3.5rem 1.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote .container {
+    width: 100%;
+    max-width: var(--max-width);
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2.5rem 2rem;
+}
+
+.quote figure {
+    color: var(--quote-text);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.quote blockquote {
+    font-size: var(--quote-text-size);
+    font-weight: var(--quote-text-weight);
+    font-style: var(--quote-text-style);
+    margin-bottom: 0.8rem;
+}
+
+.quote figcaption {
+    color: var(--quote-text);
+    font-size: var(--quote-caption-size);
+    font-weight: var(--quote-caption-weight);
+}
+
+.quote cite {
+    font-style: var(--quote-cite-style);
+    margin-right: 1rem;
 }
