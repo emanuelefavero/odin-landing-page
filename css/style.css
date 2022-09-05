@@ -1,4 +1,186 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Variables */
+:root {
+    /* Standard Max Width */
+    --max-width: 1280px;
+
+    /* Colors */
+    --dark-background: #1f2937;
+    --hero-main-text: #f9faf8;
+    --hero-secondary-text: #e5e7eb;
+    --header-logo-text: var(--hero-main-text);
+    --header-link-text: var(--hero-secondary-text);
+    --button: #3882f6;
+    --button-hover: #3172dc;
+    --button-active: #275cb1;
+    --call-to-action-background: var(--button);
+    --info-header-text: #1f2937;
+    --quote-background: var(--hero-secondary-text);
+    --quote-text: var(var(--dark-background));
+
+    /* Font Size */
+    --hero-main-text-size: 3rem;
+    --hero-secondary-text-size: 1.125rem;
+    --header-logo-text-size: 1.5rem;
+    --info-header-text-size: 2.25rem;
+    --quote-text-size: var(--info-header-text-size);
+
+    /* Font Weight */
+    --hero-main-text-weight: 800;
+    --info-header-text-weight: var(--hero-main-text-weight);
+
+    /* Font Style */
+    --quote-text-style: italic;
+}
+
+/* Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font Assign */
+body,
+button {
+    font-family: 'Roboto', -apple-system, 'Helvetica Neue', Helvetica,
+        sans-serif;
+}
+
+/* Body */
 body {
-    background: #000;
-    color: #fff;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: max-content;
+    background-color: var(--dark-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container {
+    width: 100%;
+    max-width: var(--max-width);
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25em;
+}
+
+header .logo {
+    color: var(--header-logo-text);
+    font-size: var(--header-logo-text-size);
+    font-weight: var(--hero-main-text-weight);
+    user-select: none;
+}
+
+header .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header .links li {
+    margin: 0 0.7rem;
+}
+
+header a {
+    color: var(--header-link-text);
+    text-decoration: none;
+}
+
+header a:hover {
+    color: var(--button);
+}
+
+header a:active {
+    opacity: 0.8;
+}
+
+/* Main */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero {
+    width: 100%;
+    background-color: var(--dark-background);
+    padding: 3.5rem 1.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .container {
+    width: 100%;
+    max-width: var(--max-width);
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+}
+
+.hero .hero-text {
+    flex-grow: 1;
+    max-width: 450px;
+}
+
+.hero .hero-text h1 {
+    color: var(--hero-main-text);
+    font-size: var(--hero-main-text-size);
+    font-weight: var(--hero-main-text-weight);
+    margin-bottom: 0.5rem;
+}
+
+.hero .hero-text p {
+    color: var(--hero-secondary-text);
+    font-size: var(--hero-secondary-text-size);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.hero .hero-text button {
+    background-color: var(--button);
+    color: var(--hero-main-text);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.65rem 2.25rem;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero .hero-text button:hover {
+    background-color: var(--button-hover);
+}
+
+.hero .hero-text button:active {
+    background-color: var(--button-active);
+}
+
+.hero .hero-image-placeholder {
+    background-color: rgb(110, 116, 125);
+    width: 450px;
+    height: 240px;
+    flex-grow: 1;
+    max-width: 525px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    margin-left: 3rem;
 }
